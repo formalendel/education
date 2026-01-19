@@ -10,6 +10,7 @@ app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+# Include routers
 app.include_router(home.router)
 app.include_router(preview_excel.router)
 app.include_router(users_form.router)
