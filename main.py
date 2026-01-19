@@ -7,7 +7,7 @@ from routers import users_form
 from routers import debet_form
 
 app = FastAPI()
-
+# Something
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(home.router)
