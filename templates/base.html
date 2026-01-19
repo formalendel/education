@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Sticky Header</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Мой Липкий Хэдер (FastAPI + HTML/CSS)</h1>
+        <p>User-Agent: {{ user_agent }}</p> <!-- Отображение заголовка -->
+        <a href="/">Главная</a>
+        <a href="/preview">Предпросмотр</a>
+        <a href="/form">Форма</a>
+        <a href="/preview/debet?sort_by=Ф.И.О.">Дебеторы</a>
+    </div>
+
+    <div class="router content" itemtype="html_table">
+        {% block content %}
+        <label for="item"></label>
+        {{ item }}
+        {% endblock %}
+    </div>
+     <footer>
+        {% include 'footer.html' %}
+    </footer>
+</body>
+</html>

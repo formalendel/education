@@ -1,0 +1,16 @@
+<!-- templates/form_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма из Excel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Должники</h1>
+    <form action="/preview/debet/sort" method="post">
+        <label>{{ items | safe }}:</label>
+        <button type="submit">Отправить</button>
+        <button type="button" onclick="location.href='/preview'">Назад</button>
+    </form>
+</body>
+</html>

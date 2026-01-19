@@ -1,0 +1,7 @@
+<!-- templates/form_template.html -->
+{% extends "base.html" %}
+{% block content %}
+            {{ table_html | safe }}
+            <button type="button" onclick="location.href='/form'">Добавить</button>
+            <button type="button" onclick="location.href='/preview/debet?sort_by=Ф.И.О.'">Долг</button>
+{% endblock %}

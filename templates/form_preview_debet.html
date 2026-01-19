@@ -1,0 +1,19 @@
+<!-- templates/form_template.html -->
+{% extends "base.html" %}
+{% block content %}
+        <label>{{ items | safe }}:</label>
+    <label for="sort_by">Сортировать по:</label>
+    <select name="sort_by" id="sort_by">
+        <option value="Ф.И.О.">Имени</option>
+        <option value="долг">Долгу</option>
+        <option value="Срок до погашения (дней)">Сроку до погашения</option>
+    </select>
+    <label for="order">Порядок:</label>
+    <select name2="order" id="order">
+        <option value="asc">По возрастанию</option>
+        <!-- <option value="desc">По убыванию</option> -->
+    </select>
+    <button type="submit" formaction="/preview/debet">Отсортировать</button>
+    <button type="button" onclick="location.href='/preview'">Назад</button>
+
+    {% endblock %}

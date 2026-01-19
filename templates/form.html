@@ -1,0 +1,12 @@
+<!-- templates/form_template.html -->
+{% extends "base.html" %}
+{% block content %}
+        {% for col in columns %}
+        <div>
+            <label for="{{ col }}">{{ col }}:</label>
+            <input type="text" id="{{ col }}" name="{{ col }}" required>
+       </div>
+        {% endfor %}
+        <button type="submit">Отправить</button>
+        <button type="button" onclick="location.href='/preview'">Назад</button>
+{% endblock %}
